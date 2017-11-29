@@ -1,0 +1,140 @@
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
+body, html {
+    height: 100%;
+    color: rgb(0, 0, 0);
+    line-height: 1.8;
+}
+
+/* Create a Parallax Effect */
+.bgimg-1 {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* First image (Logo. Full height) */
+.bgimg-1 {
+    background-image: url('../images/items/background.jpg');
+    min-height: 100%;
+}
+
+
+.w3-wide {
+    letter-spacing: 10px;
+}
+
+
+/* Turn off parallax scrolling for tablets and phones */
+@media only screen and (max-device-width: 1024px) {
+    .bgimg-1 {
+        background-attachment: scroll;
+    }
+}
+
+
+.fab {
+    width: 60px;
+    height: 60px;
+    background-color: #607D8B;
+    border-radius: 50%;
+    box-shadow: 0 3px 6px 0 #455A64;
+    transition: all 0.1s ease-in-out;
+    font-size: 25px;
+    color: white;
+    text-align: center;
+    line-height: 60px;
+    position: fixed;
+    right: 50px;
+    bottom: 50px;
+ }
+  
+ .fab:hover {
+    box-shadow: 0 4px 10px 0 #455A64;
+    transform: scale(1.05);
+ }
+
+ /*--social-icons--*/
+.social {
+    text-align: center;
+    transform: translateY(-50%);
+}
+.social li {
+    display: inline;
+    margin-right: 7px;
+}
+.social .link {
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    width: 42px;
+    height: 42px;
+    border-radius: 60%;
+    border: 2px dashed white;
+    background-clip: content-box;
+    padding: 4px;
+    transition: .5s;
+    color: #D7D0BE;
+    margin-left: 10px;
+    margin-right: 8px;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2),
+	0 1px 0 rgba(255, 255, 255, 0.2);
+    font-size: 16px;
+}
+.social .link span {
+	display: block;
+	position: absolute;
+	text-align: center;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+.social .link:hover {
+    color: white;
+    transform: translateX(0px) rotate(360deg);
+}
+.social .link.linkedin {
+	background-color: #0077B5;
+	color: white;
+}
+.social .link.twitter {
+  background-color: #00ACEE;
+  color: white;
+}
+.social .link.facebook {
+  background-color: #3B5998;
+  color: white;
+}
+
+.social .link.github {
+  background-color: #000000;
+  color: white;
+}
+/*--//social-icons--*/
+
+.agile-info a {
+    font-size: 15px;
+    text-transform: uppercase;
+    color: white;
+    border: 1px solid #3b5998;
+    padding: 10px 40px;
+    border-radius: 20px;
+    letter-spacing: 1px;
+    display: inline-block;
+    margin-top: 8px;
+    background: #3b5998;
+    font-family: 'Open Sans', sans-serif;
+	transition:0.5s all;
+	-webkit-transition:0.5s all;
+	-o-transition:0.5s all;
+	-moz-transition:0.5s all;
+	-ms-transition:0.5s all;
+}
+.agile-info a:hover {
+    background: #1f3c7b;
+	transition:0.5s all;
+	-webkit-transition:0.5s all;
+	-o-transition:0.5s all;
+	-moz-transition:0.5s all;
+	-ms-transition:0.5s all;
+}

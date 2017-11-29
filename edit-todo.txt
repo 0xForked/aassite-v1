@@ -1,0 +1,106 @@
+/**
+ *       _____           _____          _________             .__  __                 
+ *      /  _  \         /  _  \        /   _____/__ __  _____ |__|/  |________  ____  
+ *     /  /_\  \       /  /_\  \       \_____  \|  |  \/     \|  \   __\_  __ \/  _ \ 
+ *    /    |    \     /    |    \      /        \  |  /  Y Y  \  ||  |  |  | \(  <_> )
+ *    \____|__  / /\  \____|__  / /\  /_______  /____/|__|_|  /__||__|  |__|   \____/ 
+ *            \/  \/          \/  \/          \/            \/                        
+ *
+ *    |_ _|__|_ _  _. / / _  _ _ _ ._|_|_   _ _    . _|
+ *    | | |  | |_)_\./ / (_|_\| | || | | |.| | |\/.|(_|
+ *             |                                /      
+ */
+
+################### TODO LOG ###################
+
+###################
+  Backend
+###################
+ *  Login Security
+ *  Dahsboard
+ *
+ *
+ *
+ *
+
+
+###################
+  Frontend
+###################
+ *  Index design
+ *  Blog Design
+ *  Blog Detail design
+ *  Project design
+ *  Contact design 
+ *  Other item
+
+
+###################
+  Security
+###################
+
+ *  SQL Injection
+ *  Hash password
+ *  Hak Akses user
+ *  Format file
+ *  Stuktur folder - private and public
+ *  Hak akses lvl error report
+ *  xss attack
+ *  CSRF attack
+
+
+################### EDIT LOG ###################
+
+###################
+  edit 15/11/2017
+###################
+
+ *	add .htaccess file in main ../ 
+ *	edit autoload add library(database & sessions), add helper(url)
+ *	edit config flexible base url, delete index.php
+ *	add vendor bootsrap, chart.js, datatables, jquery, jquery-easing
+ *	add css from W3layouts and fonts from font-awesome
+ *	file index.html -> assets folder
+ *  file error_404	-> errors folder
+ *	file error_db	-> errors folder
+ *	file login		-> admins folder
+ 
+###################
+  edit 16/11/2017
+###################
+
+ *  add SBSmaterial template material style
+ *  add pages index, blog, portfolio, contact design with medium style
+ *  add ion auth libs 
+ *  create user login sessions logout with ion auth
+
+###################
+  edit 19/11/2017
+###################
+
+ *	create category model and controler
+ *	delete, get and create  category feature
+ *	create tag model and controler
+ *	delete, get and create tag feature
+ *	create message model and controler
+ *	delete, get , get limit and create message (plus) feature mark message (isReplied)
+
+###################
+  edit 21/11/2017
+###################
+* article delete, mark publish, mark headline, create and get in admin fix
+* admin home/beranda fix tinggal jumlah portfolio dng unique visitor
+* message fix mark replied, get, delete
+* tag dan kategory create, get, update fix min jumlah digunakan
+
+
+###################
+  edit 23/11/2017
+###################
+* front end
+  - contact and index (home) FIX
+  - blog 
+    #tampilan semua artilce (jadi)
+    #tampilan detail artilce (jadi)
+    #tampilan articel percategory (jadi)
+  - Privacy policy - mines bahasa ingris
