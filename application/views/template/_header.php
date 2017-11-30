@@ -13,7 +13,7 @@
     <link rel="shortcut icon" href="<?php echo base_url();?>assets/images/items/favicon.png">
     <!-- <link href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,500,700,800" rel="stylesheet">    -->
     <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700" rel="stylesheet">
-    
+
     <!-- Animate.css -->
     <link rel="stylesheet" href="<?php echo base_url(); ?>assets/vendor/AIR/css/animate.css">
     <!-- Icomoon Icon Fonts-->
@@ -22,6 +22,8 @@
     <link rel="stylesheet" href="<?php echo base_url(); ?>assets/vendor/AIR/css/bootstrap.css">
     <!-- Flexslider  -->
     <link rel="stylesheet" href="<?php echo base_url(); ?>assets/vendor/AIR/css/flexslider.css">
+    <!-- timeline -->
+    <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/timeline.css">
 
     <!-- Theme style  -->
     <link rel="stylesheet" href="<?php echo base_url(); ?>assets/vendor/AIR/css/style.css">
@@ -29,7 +31,7 @@
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <!-- Modernizr JS -->
     <script src="<?php echo base_url(); ?>assets/vendor/AIR/js/modernizr-2.6.2.min.js"></script>
-    
+
     <!-- FOR IE9 below -->
     <!--[if lt IE 9]>
     <script src="js/respond.min.js"></script>
@@ -37,9 +39,9 @@
 
     </head>
     <body >
-        
+
     <div class="fh5co-loader"></div>
-    
+
     <div id="page">
         <nav class="fh5co-nav" role="navigation">
             <div class="top-menu">
@@ -70,7 +72,7 @@
                             </ul>
                         </div>
                     </div>
-                    
+
                 </div>
             </div>
         </nav>
