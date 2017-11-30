@@ -225,7 +225,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `ip_address`, `username`, `password`, `salt`, `email`, `activation_code`, `forgotten_password_code`, `forgotten_password_time`, `remember_code`, `created_on`, `last_login`, `active`, `full_name`, `company`, `phone`) VALUES
-(4911545, '127.0.0.1', 'aasumitro', '$2y$08$Lx466LxFKVGth8cn7PB93.Z0Xt7hMpPVD0ZG4/4Lc1QpI9rXG07l6', NULL, 'aasumitro@gmail.com', NULL, NULL, NULL, 'b3ks/mdTd4SSMj0O6AG3y.', 1510841429, 1512002831, 1, 'Agus Adhi Sumitro', 'Asmith App', '+6282271115593');
+(123, '127.0.0.1', 'admin', '$2a$07$SeBknntpZror9uyftVopmu61qg0ms8Qv1yV6FG.kQOSM.9QhmTo36', NULL, 'admin@admin.com', NULL, NULL, NULL, 'b3ks/mdTd4SSMj0O6AG3y.', 1510841429, 1512002831, 1, 'admin', 'Asmith App', '+6280000000');
 
 -- --------------------------------------------------------
 
@@ -250,7 +250,7 @@ CREATE TABLE `user_detail` (
 --
 
 INSERT INTO `user_detail` (`id`, `users_id`, `users_username`, `users_name`, `users_email`, `user_number`, `website_name`, `website_description`, `maintenance_status`) VALUES
-(1, 4911545, 'aasumitro', 'Agus Adhi Sumitro', 'aasumitro@gmail.com', '+6282271115593', 'Agus Adhi Sumitro Personal web page', 'Personal Website', 'N');
+(1, 123, 'admin', 'admin', 'admin@admin.com', '+628000000', 'Its admin', 'Personal Website', 'N');
 
 --
 -- Indexes for dumped tables
