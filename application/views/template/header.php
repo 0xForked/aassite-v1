@@ -7,7 +7,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
         <title>A. A. Sumitro - Dashboard</title>
-       
+
         <!-- Favicon-->
         <link rel="shortcut icon" href="<?php echo base_url();?>assets/images/items/favicon.png">
         <!-- Google Fonts -->
@@ -31,7 +31,7 @@
         <link href="<?php echo base_url();?>assets/vendor/SBSMaterial/plugins/bootstrap-tagsinput/bootstrap-tagsinput.css" rel="stylesheet">
         <!-- Fonts -->
         <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-                
+
         <!-- Jquery Core Js -->
         <script src="<?php echo base_url();?>assets/vendor/SBSMaterial/plugins/jquery/jquery.min.js"></script>
         <!-- Bootstrap Core Js -->
@@ -54,7 +54,7 @@
         <script src="<?php echo base_url();?>assets/vendor/SBSMaterial/js/pages/index.js"></script>
         <!-- Demo Js -->
         <script src="<?php echo base_url();?>assets/vendor/SBSMaterial/js/demo.js"></script>
-        
+
     </head>
 
     <body class="theme-blue-grey">
@@ -99,11 +99,11 @@
                 </div>
                 <div class="collapse navbar-collapse" id="navbar-collapse">
                     <ul class="nav navbar-nav navbar-right">
-                                        
-                        <li><a data-toggle="modal" data-target="#settingModal"><i class="material-icons waves-effect">settings</i></a></li>   
+
+                        <li><a data-toggle="modal" data-target="#settingModal"><i class="material-icons waves-effect">settings</i></a></li>
                         <li><a href="<?php echo base_url();?>" target="_blank"><i class="material-icons">desktop_windows</i></a></li>
                         <li><a data-toggle="modal" data-target="#smallModal"><i class="material-icons waves-effect">input</i></a></li>
-                   
+
                     </ul>
                 </div>
             </div>
@@ -119,13 +119,13 @@
                     </div>
                     <div class="info-container">
                         <div class="name" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <?php 
+                            <?php
                                 foreach ($users as $user) {
                                     if($id == $user['users_id']){
                                         echo $user['users_name'];
                                     }
-                                }   
-                            ?>    
+                                }
+                            ?>
                         </div>
                         <div class="email"><?php echo $email ?></div>
                     </div>
@@ -147,7 +147,7 @@
                                 <i class="material-icons">forum</i>
                                 <span>Message</span>
                             </a>
-                        </li>  
+                        </li>
                         <li class="<?php echo ($activeTab=="article")?"active":""; ?>">
                             <a href="javascript:void(0);" class="menu-toggle">
                                 <i class="material-icons">text_fields</i>
@@ -181,15 +181,15 @@
                                     <a  href="<?php echo base_url();?>dashboard/portfolio/create">Add portfolio</a>
                                 </li>
                             </ul>
-                        </li>    
+                        </li>
                         <li class="<?php echo ($activeTab=="media")?"active":""; ?>">
                             <a href="<?php echo base_url();?>dashboard/media">
                                 <i class="material-icons">perm_media</i>
                                 <span>Media</span>
                             </a>
-                        </li> 
-                        
-                        
+                        </li>
+
+
                     </ul>
                 </div>
                 <!-- #Menu -->
@@ -204,7 +204,7 @@
                 </div>
                 <!-- #Footer -->
             </aside>
-            <!-- #END# Left Sidebar --> 
+            <!-- #END# Left Sidebar -->
         </section>
 
              <!-- Small Size modal -->
@@ -225,6 +225,7 @@
                 </div>
             </div>
 
+            <?php echo form_open_multipart('admin/maintenance'); ?>
             <div class="modal fade" id="settingModal" tabindex="-1" role="dialog">
                 <div class="modal-dialog" role="document">
                     <div class="modal-content">
@@ -237,26 +238,27 @@
                             </div>
                            <?php foreach ($users as $user) :?>
                                     <?php if($id == $user['users_id']) :?>
+
                                         <div class="switch" style="text-align:center; margin:0 0 15px 20px">
-                                            <label>Active<input type="checkbox" name="articleStatus" 
-                                                <?php 
+                                            <label>Active<input type="checkbox" name="siteStatus"
+                                                <?php
                                                     $status = $user['maintenance_status'];
-                                                    if($status == "Y") { 
+                                                    if($status == "Y") {
                                                         echo "checked";
-                                                    } 
+                                                    }
                                                 ?>>
                                             <span class="lever"></span>Maintenance</label>
-                                        </div>                                    
+                                        </div>
+
                                     <?php endif ?>
                            <?php endforeach ?>
-                            <!-- <div class="switch" style="text-align:center; margin:0 0 15px 0"> -->
-                                <!-- <label>Active<input type="checkbox" name="articlePublish" <?php if($users['maintenance_status'] == "Y"){ echo "checked";} ?>><span class="lever"></span>Maintenance</label> -->
-                            <!-- </div> -->
+
                         </div>
                         <div class="modal-footer">
-                            <a type="button" class="btn btn-link bg-red waves-effect" style="color:white" data-dismiss="modal">Save</a>
+                            <button type="submit" class="btn btn-link bg-red waves-effect" style="color:white">Save</button>
                             <button type="button" class="btn btn-link waves-effect" data-dismiss="modal">Close</button>
                         </div>
                     </div>
                 </div>
             </div>
+            <?php echo form_close(); ?>

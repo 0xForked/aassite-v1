@@ -14,7 +14,7 @@
 
     <!-- <link href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,500,700,800" rel="stylesheet">    -->
     <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700" rel="stylesheet">
-    
+
     <!-- Animate.css -->
     <link rel="stylesheet" href="<?php echo base_url(); ?>assets/vendor/AIR/css/animate.css">
     <!-- Icomoon Icon Fonts-->
@@ -40,9 +40,9 @@
     </head>
 
     <body style="overflow:hidden">
-        
+
         <div class="fh5co-loader"></div>
-        
+
         <div id="page">
         <nav class="fh5co-nav" role="navigation">
             <div class="top-menu">
@@ -74,7 +74,7 @@
                             </ul>
                         </div>
                     </div>
-                    
+
                 </div>
             </div>
         </nav>
@@ -87,7 +87,7 @@
                         <div class="display-tc js-fullheight">
                             <div class="display-tc js-fullheight animate-box" data-animate-effect="fadeIn">
                                 <h1>We're all Working Together; that's the <span>Secret/.</span></h1>
-                                <h2>Hi, i'm <a href="<?php echo base_url();?>" target="_blank">Agus Adhi Sumitro</a></br>
+                                <h2>Hi, i'm <a href="<?php echo base_url();?>about">Agus Adhi Sumitro</a></br>
                                 <span id="typer"></span></h2>
                                 <p><a style="margin-bottom: 20px" class="btn btn-primary btn-lg btn-demo" href="<?php echo base_url();?>project"></i> Latest Project</a> <a style="margin-bottom: 20px" class="btn btn-primary btn-lg btn-learn" href="<?php echo base_url();?>blog">Latest Article</a></p>
                             </div>

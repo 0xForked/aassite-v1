@@ -6,12 +6,12 @@
 		</div>
 		<div class="container">
 			<div class="col-md-8 col-md-offset-2 animate-box">
-				
+
 				<h1 style="text-align: center;"><?php echo $article['post_title'] ?></h1>
-				
+
 				<span class="posted_on">
-					<?php 
-                                    
+					<?php
+
                         $content = $article['post_body'];
                         $wordnum = str_word_count(strip_tags($content)) ;
                         $avgtime = 120;
@@ -24,10 +24,10 @@
 						} else {
 							echo " - <a>".$minutes." min read</a>".'</h4>';
 						}
-                                    
+
                     ?>
 				</span>
-				
+
 				<div id="share-buttons" style="margin: 20px 0 20px 0">
 					<center>
 						<!-- Facebook -->
@@ -44,20 +44,20 @@
 						</a>
 					</center>
 				</div>
-				
+
 				<figure class="figure fh5co-heading">
-					<img src="<?php 
+					<img src="<?php
 							$images = $article['post_image'];
 							if($images != "noimage.jpg"){
 								echo base_url()."assets/images/post/".$article['post_image'];
 							} else {
 								echo base_url()."assets/images/items/noimage.jpg";
 							}
-	
+
 						?>" class="img-responsive ">
 					<h5 style="margin-top: 10px" class="figure-caption text-center">Gambar ilustrasi.</h5>
 				</figure>
-				
+
 				<p><?php echo $article['post_body'] ?></p>
 				<?php
 
@@ -69,7 +69,7 @@
 				 ?>
 
 				<div id="share-buttons" style="margin: 20px 0 20px 10px">
-				
+
 						Share :
 						<!-- Facebook -->
 					    <a style="margin-right: 10px" href="http://www.facebook.com/sharer.php?u=<?php echo base_url(); ?>blog/<?php echo $article['post_slug']?>" target="_blank">
@@ -82,11 +82,20 @@
 					    <!-- Twitter -->
 					    <a href="https://twitter.com/share?url=<?php echo base_url(); ?>blog/<?php echo $article['post_slug']?>" target="_blank">
 							<i class="fa fa-twitter"></i>
-						</a>		
-					
+						</a>
+
 				</div>
 
 				<div  style="margin:30px 10px 0px 10px;" id="disqus_thread"></div>
 
 			</div>
 		</div>
+
+		<script>
+			(function() { // DON'T EDIT BELOW THIS LINE
+			var d = document, s = d.createElement('script');
+			s.src = 'https://asmith-2.disqus.com/embed.js';
+			s.setAttribute('data-timestamp', +new Date());
+			(d.head || d.body).appendChild(s);
+			})();
+		</script>

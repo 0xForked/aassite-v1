@@ -173,18 +173,28 @@ class Portfolio extends CI_Controller {
 //=========================================			PUBLIC			=========================================//
 
 	public function view_category($slug){
+		$users = $this->user_model->get_user_public();
+		foreach($users as $user){
+			if($user['maintenance_status'] == "Y"){
 
-		$data['portfolio'] = $this->portfolio_model->get_portfolio_category($slug);
+				$this->load->view('errors/html/error_maintenance');
+			} else{
+				$data['portfolio'] = $this->portfolio_model->get_portfolio_category($slug);
 
-		if(empty($data['portfolio'])){
-			$data['error'] = "There nothing here";
+				if(empty($data['portfolio'])){
+					$data['error'] = "There nothing here";
+				}
+
+				$data['activeTab'] = "project";
+				$this->load->view('template/_header',$data);
+				$this->load->view('pages/project', $data);
+				$this->load->view('template/_footer_body');
+				$this->load->view('template/_footer');
+			}
+
 		}
 
-		$data['activeTab'] = "project";
-		$this->load->view('template/_header',$data);
-		$this->load->view('pages/project', $data);
-		$this->load->view('template/_footer_body');
-		$this->load->view('template/_footer');
+
 	}
 
 //=========================================			PUBLIC			=========================================//
