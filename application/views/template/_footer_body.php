@@ -3,10 +3,10 @@
 			<div class="row row-pb-md">
 				<div class="col-md-4 fh5co-widget">
 					<h4>/.<a>SMIT</a> WEB</h4>
-					<img src="<?php echo base_url(); ?>assets/images/items/user_pic.png" class="img-circle img-responsive" style="height: 60px; width: 60px; margin-bottom: 10px"> 
+					<img src="<?php echo base_url(); ?>assets/images/items/user_pic.png" class="img-circle img-responsive" style="height: 60px; width: 60px; margin-bottom: 10px">
 					<p>Oh Hello, </br>
 						My name is Agus Adhi Sumitro welcome to my personal web pages....
-						<a style="text-align: right" href="<?php echo base_url(); ?>blog/ini-saya-tak-kenal-maka-tak-sayang">Read More <i class="icon-arrow-right22"></i></a>
+						<a style="text-align: right" href="<?php echo base_url(); ?>about">Read More <i class="icon-arrow-right22"></i></a>
 					</p>
 				</div>
 				<div class="col-md-2 col-md-push-1 fh5co-widget">
@@ -15,7 +15,8 @@
 						<li><a href="<?php echo base_url();?>">Home</a></li>
 						<li><a href="<?php echo base_url();?>project">Project</a></li>
 						<li><a href="<?php echo base_url();?>blog">Blog</a></li>
-						<li><a href="<?php echo base_url();?>blog/ini-saya-tak-kenal-maka-tak-sayang">About</a></li>
+						<li><a href="<?php echo base_url();?>contact">Contact</a></li>
+						<li><a href="<?php echo base_url();?>about">About Me</a></li>
 						<!--li><a href="<?php echo base_url();?>privacy">Privacy Policy</a></li-->
 					</ul>
 				</div>
@@ -45,7 +46,7 @@
 			<div class="row copyright">
 				<div class="col-md-12 text-center">
 					<p>
-						<small class="block">&copy; 2017 <a href="<?php echo base_url() ?>">A. A. Sumitro</a>. All Rights Reserved.</small> 
+						<small class="block">&copy; 2017 <a href="<?php echo base_url() ?>about">A. A. Sumitro</a>. All Rights Reserved.</small>
 						<small class="block">Stay connect with me!</a></small>
 					</p>
 					<p>

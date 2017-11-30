@@ -2,29 +2,29 @@
 
 class Article_model extends CI_Model {
 
-	//create a new article 
+	//create a new article
 	//used in dashboard/article/add
 	public function create_article($image_01){
 
 		$slug = url_title($this->input->post('articleTitle'));
 		$clap = '0';
 
-		if(empty($_POST["articleStatus"]) ) { 
-			$status = 'isArticle'; 
-		} else { 
-			$status = 'isFeatured'; 
+		if(empty($_POST["articleStatus"]) ) {
+			$status = 'isArticle';
+		} else {
+			$status = 'isFeatured';
 		}
 
-		if(empty($_POST["articlePublish"]) ) { 
-			$publis = 'isConcept'; 
-		} else { 
-			$publis = 'isPublished'; 
+		if(empty($_POST["articlePublish"]) ) {
+			$publis = 'isConcept';
+		} else {
+			$publis = 'isPublished';
 		}
 
 		$category = implode(',', $_POST['articleCategory']);
 
 		$data = array(
-			'post_author' => $this->session->userdata( 'user_id' ),	 //fix	successssss	
+			'post_author' => $this->session->userdata( 'user_id' ),	 //fix	successssss
 			'post_category' => $category, //fix coyyyy akhirnya
 			'post_tag' => $this->input->post('articleTags'), //successsss
 			'post_slug' => strtolower($slug),  //fix successsss
@@ -32,15 +32,15 @@ class Article_model extends CI_Model {
 			'post_status' => $status,	//fix success sss
 			'post_clap' => $clap,	//fix successsss
 			'post_image' => $image_01, //fix successssss
-			'post_title' => $this->input->post('articleTitle'),	 //fix successs	
+			'post_title' => $this->input->post('articleTitle'),	 //fix successs
 			'post_body' => $this->input->post('articleBody')  //fix successssss
 
-		); 
+		);
 
 		$folder = "post";
 		$gallery = array(
-			
-			'image_title' =>$this->input->post('articleTitle'),	
+
+			'image_title' =>$this->input->post('articleTitle'),
 			'image_folder' => $folder,
 			'image_name' => $image_01
 		);
@@ -65,22 +65,22 @@ class Article_model extends CI_Model {
 		$slug = url_title($this->input->post('articleTitle'));
 		//$clap = '0';
 
-		if(empty($_POST["articleStatus"]) ) { 
-			$status = 'isArticle'; 
-		} else { 
-			$status = 'isFeatured'; 
+		if(empty($_POST["articleStatus"]) ) {
+			$status = 'isArticle';
+		} else {
+			$status = 'isFeatured';
 		}
 
-		if(empty($_POST["articlePublish"]) ) { 
-			$publis = 'isConcept'; 
-		} else { 
-			$publis = 'isPublished'; 
+		if(empty($_POST["articlePublish"]) ) {
+			$publis = 'isConcept';
+		} else {
+			$publis = 'isPublished';
 		}
 
 		$category = implode(',', $_POST['articleCategory']);
 
 		$data = array(
-			'post_author' => $this->session->userdata( 'user_id' ),	 //fix	successssss	
+			'post_author' => $this->session->userdata( 'user_id' ),	 //fix	successssss
 			'post_category' => $category, //fix coyyyy akhirnya
 			'post_tag' => $this->input->post('articleTags'), //successsss
 			'post_slug' => strtolower($slug),  //fix successsss
@@ -88,10 +88,10 @@ class Article_model extends CI_Model {
 			'post_status' => $status,	//fix success sss
 			//'post_clap' => $clap,	//fix successsss so ada isi
 			//'post_image' => $image_01, //fix successssss nda da update images
-			'post_title' => $this->input->post('articleTitle'),	 //fix successs	
+			'post_title' => $this->input->post('articleTitle'),	 //fix successs
 			'post_body' => $this->input->post('articleBody')  //fix successssss
 
-		); 
+		);
 
 		$this->db->where('posts_id', $this->input->post('articleId'));
 		return $this->db->update('posts', $data);
@@ -115,7 +115,7 @@ class Article_model extends CI_Model {
 
 	//for admin /dashboard/article
 	public function get_article($slug = FALSE){
-		
+
 		if($slug === FALSE) {
 			$this->db->order_by('posts.created_at', 'DESC');
 	        $query = $this->db->get('posts');
@@ -124,12 +124,12 @@ class Article_model extends CI_Model {
 
 		$query = $this->db->get_where('posts', array('post_slug' => $slug));
 		return $query->row_array();
-        
+
 	}
 
 	//for admin /dashboard/index
 	public function get_article_limit(){
-		
+
         $this->db->order_by('posts.posts_id');
         $this->db->where('isPublished', 'isConcept');
         $query = $this->db->get('posts', 5);
@@ -170,7 +170,7 @@ class Article_model extends CI_Model {
 	}
 
 	//=========================================			PUBLIC			=========================================//
-	
+
 		//for public /blog
 		public function get_artilce_published($slug = FALSE, $limit = FALSE, $offset = FALSE){
 			if($limit){
@@ -189,19 +189,19 @@ class Article_model extends CI_Model {
 			return $query->row_array();
 		}
 
-		//for public by category 
+		//for public by category
 		public function get_article_category($catg){
-			
+
 			$status = "isPublished";
 			$this->db->order_by('posts.created_at', 'DESC');
 			$this->db->where('post_category', $catg);
 			$this->db->where('isPublished', $status);
 			$query = $this->db->get('posts');
 			return $query->result_array();
-		
+
 		}
 
-	//=========================================				PUBLIC				=========================================//
+	//=========================================			PUBLIC			=========================================//
 }
 
 /* End of file Article_model.php */

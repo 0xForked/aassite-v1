@@ -20,10 +20,12 @@ $route['project'] = 'pages/project';
 $route['blog'] = 'pages/blog';
 $route['contact'] = 'pages/contact';
 $route['privacy'] = 'pages/privacy';
+$route['about'] = 'pages/about';
 
 //Detail
 $route['blog/(:any)'] = 'article/view_detail/$1';
 $route['category/(:any)'] = 'article/view_category/$1';
+$route['project/(:any)'] = 'portfolio/view_category/$1';
 
 //Main
 $route['default_controller'] = 'pages';

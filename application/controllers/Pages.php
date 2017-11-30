@@ -9,16 +9,17 @@ class Pages extends CI_Controller {
 	}
 
 	public function index(){
-		
-		$this->load->view('pages/index');	
+
+		$this->load->view('pages/index');
 		$this->load->view('template/_footer');
 	}
 
 	public function project(){
 		$data['title'] = "Project";
 		$data['activeTab'] = "project";
+		$data['portfolio'] = $this->portfolio_model->get_portfolio_published();
 		$this->load->view('template/_header',$data);
-		$this->load->view('pages/project');
+		$this->load->view('pages/project', $data);
 		$this->load->view('template/_footer_body');
 		$this->load->view('template/_footer');
 	}
@@ -46,10 +47,19 @@ class Pages extends CI_Controller {
 	}
 
 	public function privacy(){
-		$data['title'] = "Contact";
+		$data['title'] = "Privacy";
 		$data['activeTab'] = "none";
 		$this->load->view('template/_header',$data);
 		$this->load->view('pages/privacy_police');
+		$this->load->view('template/_footer_body');
+		$this->load->view('template/_footer');
+	}
+
+	public function about(){
+		$data['title'] = "About";
+		$data['activeTab'] = "none";
+		$this->load->view('template/_header',$data);
+		$this->load->view('pages/about');
 		$this->load->view('template/_footer_body');
 		$this->load->view('template/_footer');
 	}
