@@ -11,7 +11,7 @@ Page Giude
 1. Login page your-site/login
     put the user email and user password
     default user email  : admin@admin.com
-    default password    : admin
+    default password    : password
 
 2. Dashboard page site/dashboard
     dashboard menu :
