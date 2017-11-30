@@ -1,27 +1,22 @@
-                <div id="fh5co-about">
-                    <div class="container">
+
+                    <div class="container" style="margin-top:40px">
                         <div class="row animate-box">
                             <div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
-                                <h2>About Me</h2>
-                                <p>Theres nothing here</p>
+                                <h2>ABOUT <a>ME</a></h2>
                             </div>
                         </div>
-                        <!-- <div class="row animate-box">
-                            <div class="col-md-6 col-md-offset-3 text-center heading-section">
-                                <h3>Our History</h3>
-                                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                        <div class="row animate-box"  >
+                            <div class="col-md-6 col-md-offset-3 text-center heading-section" >
+                                <img src="<?php echo base_url(); ?>assets/images/items/user_pic.png" class="img-circle " height="250pxpx" width="250px">
+                                <p style="margin-top:20px">Hi, My name is Agus Adhi Sumitro, I'm a freelance Mobile  and Web Developer, I'm specialize develop Android app and Web app. I’ve worked with a lot of people, <a href="<?php echo base_url(); ?>contact">contact me</a>  if you'd like to work together on your next project. </p>
                             </div>
                         </div>
 
-                        <div class="row row-bottom-padded-md">
-                            <div class="col-md-12 text-center animate-box">
-                                <p><img src="images/cover_bg_1.jpg" alt="Free HTML5 Bootstrap Template" class="img-responsive img-rounded"></p>
-                            </div>
-                        </div> -->
+
                     </div>
-                </div>
 
-                <!-- <div id="fh5co-features">
+<!--
+                <div id="fh5co-features">
                     <div class="container">
                         <div class="services-padding">
                             <div class="row">

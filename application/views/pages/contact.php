@@ -12,9 +12,9 @@
 					 <!-- Flash messages -->
 	                <?php if($this->session->flashdata('save_message')): ?>
 					  <?php echo '<p class="alert alert-success" style="text-align:center">'.$this->session->flashdata('save_message').'</p>'; ?>
-				
-					<?php endif; ?> 
-					
+
+					<?php endif; ?>
+
 					<div class="col-md-3 col-md-push-1 animate-box">
 						<h3>My Address</h3>
 						<ul class="contact-info">

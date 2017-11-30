@@ -146,7 +146,7 @@
                                                     </td>
                                                     <td>
 
-                                                        <a data-tooltip="tooltip" title="Detail!" href="<?php echo base_url(); ?>blog/<?php echo $project['portfolio_slug'] ?>" target="_blank"><i class="material-icons waves-effect" style="color:green">remove_red_eye</i></a>
+                                                        <a data-tooltip="tooltip" title="Detail!" href="<?php echo base_url(); ?>project/<?php echo $project['portfolio_category'] ?>" target="_blank"><i class="material-icons waves-effect" style="color:green">remove_red_eye</i></a>
 
                                                         <a href="<?php echo base_url(); ?>portfolio/update/<?php echo $project['portfolio_slug'] ?>" data-tooltip="tooltip" title="Edit now!"  ><i class="material-icons waves-effect" >edit</i></a>
 

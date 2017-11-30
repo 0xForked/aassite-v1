@@ -27,7 +27,7 @@
 								}
 
 							?>);">
-								<span style="margin: 10px 0 0 10px" class="badge badge-danger"> <?php echo $project['portfolio_category'] ?></span>
+								<span style="margin: 10px 0 0 10px; background:#000" class="badge badge-danger"> <?php echo $project['portfolio_category'] ?></span>
 								<?php if($project['link_github'] != null): ?>
 									<span style="margin: 10px 0 0 0; background:#000" class="badge badge-danger"> Open Source </span>
 								<?php endif ?>
