@@ -24,7 +24,7 @@ $route['about'] = 'pages/about';
 
 //Detail
 $route['blog/(:any)'] = 'article/view_detail/$1';
-$route['category/(:any)'] = 'article/view_category/$1';
+$route['categories/(:any)'] = 'article/view_category/$1';
 $route['project/(:any)'] = 'portfolio/view_category/$1';
 
 //Main

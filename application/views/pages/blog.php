@@ -7,53 +7,57 @@
 				</div>
 			</div>
 			<div class="row">
-			
-			<?php 
+
+			<?php
 				if(empty($article)){
 					 echo "<h1 class="."text-center".">Theres nothing in here</h1>";
-				}	
+				}
 			?>
-			
+
 			<?php foreach($article as $post) : ?>
 				<div class="col-sm-6 col-md-4">
 					<div class="fh5co-blog animate-box card-columns">
-						<a href="<?php echo base_url(); ?>blog/<?php echo $post['post_slug'] ?>" class="blog-bg" 
-						style="background-image: url(<?php 
+						<a href="<?php echo base_url(); ?>blog/<?php echo $post['post_slug'] ?>" class="blog-bg"
+						style="background-image: url(<?php
 							$images = $post['post_image'];
-							if($images != "noimage.jpg"){
-								echo base_url()."assets/images/post/".$post['post_image'];
-							} else {
+							if($images == "noimage.jpg"){
 								echo base_url()."assets/images/items/noimage.jpg";
+							} else if($images == "java.jpg") {
+								echo base_url()."assets/images/items/java.jpg";
+							} else if($images == "php.jpg") {
+								echo base_url()."assets/images/items/php.jpg";
+							}else {
+								echo base_url()."assets/images/post/".$post['post_image'];
 							}
-	
+
 						?>);">
-							<?php 
+							<?php
 								$Headline = $post['post_status'];
 								if($Headline == "isFeatured"){
 									echo '<span style="margin: 10px 0 0 10px; background:#C2185B" class="badge badge-danger">'
-												  ."HOT". 
-												'</span>';	
+												  ."HOT".
+												'</span>';
 								}
-								
+
 								$cats = explode(',', $post['post_category']);
 			                        foreach ($categories as $key) {
 			                            foreach ($cats as $value) {
 			                                if($key['category_id'] == $value){
-			                                    echo 
+			                                    echo
 			                                    '<span style="margin: 10px 0 0 10px" class="badge badge-danger">'
-												  .$key['category_title']. 
+												  .$key['category_title'].
 												'</span>';
 			                                }
 			                            }
-			                                    	
-			                    	}                	
+
+			                    	}
 
 							?></a>
 						<div class="blog-text">
-							
+
 							<span class="posted_on">
-								<?php 
-                                    
+								<?php
+
                                     $content = $post['post_body'];
                                     $wordnum = str_word_count(strip_tags($content)) ;
                                     $avgtime = 120;
@@ -69,24 +73,24 @@
 
                                 ?>
 							</span>
-							
+
 							<div style="height:115px">
 								<h3>
 									<a href="<?php echo base_url(); ?>blog/<?php echo $post['post_slug'] ?>">
 									<?php echo $post['post_title'] ?></a>
 								</h3>
 							</div>
-							
-							
+
+
 							<ul class="stuff">
 								<li><i class="icon-heart2"></i><?php echo $post['post_clap']; ?></li>
 								<li><a href="<?php echo base_url(); ?>blog/<?php echo $post['post_slug'] ?>">Read More<i class="icon-arrow-right22"></i></a></li>
 							</ul>
-						</div> 
+						</div>
 					</div>
 				</div>
 			<?php endforeach; ?>
-				
+
 			</div>
 		</div>
 

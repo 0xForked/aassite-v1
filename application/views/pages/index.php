@@ -64,9 +64,9 @@
                                 <li class="has-dropdown">
                                     <a href="<?php echo base_url();?>blog">Blog</a>
                                     <ul class="dropdown">
-                                        <li><a href="<?php echo base_url();?>category/blow-mind">Blow mind</a></li>
-                                        <li><a href="<?php echo base_url();?>category/mobile">Mobile</a></li>
-                                        <li><a href="<?php echo base_url();?>category/web">Web</a></li>
+                                        <li><a href="<?php echo base_url();?>categories/blow-mind">Blow mind</a></li>
+                                        <li><a href="<?php echo base_url();?>categories/mobile">Mobile</a></li>
+                                        <li><a href="<?php echo base_url();?>categories/web">Web</a></li>
                                     </ul>
                                 </li>
                                 <li><a href="<?php echo base_url();?>contact">Contact</a></li>

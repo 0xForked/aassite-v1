@@ -46,7 +46,16 @@ class Article extends CI_Controller {
 
 				if(!$this->upload->do_upload('articleImage')){
                     $errors = $this->upload->display_errors();
-                    $image_01 = 'noimage.jpg';
+					$category = implode(',', $_POST['articleCategory']);
+
+					if ($category == 8){
+						$image_01 = 'php.jpg';
+					}else if ($category == 9){
+						$image_01 = 'java.jpg';
+					}else{
+						$image_01 = 'noimage.jpg';
+					}
+
 
                 }else{
                     $image_01 =  $this->upload->data();

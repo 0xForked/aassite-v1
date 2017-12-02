@@ -24,10 +24,10 @@
 				<div class="col-md-2 col-md-push-1 fh5co-widget">
 					<h4>Categories</h4>
 					<ul class="fh5co-footer-links">
-						<li><a href="<?php echo base_url();?>category/uncategory">Uncategory</a></li>
-						<li><a href="<?php echo base_url();?>category/blow-mind">Blow mind</a></li>
-						<li><a href="<?php echo base_url();?>category/mobile">Mobile</a></li>
-						<li><a href="<?php echo base_url();?>category/web">Web</a></li>
+						<li><a href="<?php echo base_url();?>categories/uncategory">Uncategory</a></li>
+						<li><a href="<?php echo base_url();?>categories/blow-mind">Blow mind</a></li>
+						<li><a href="<?php echo base_url();?>categories/mobile">Mobile</a></li>
+						<li><a href="<?php echo base_url();?>categories/web">Web</a></li>
 					</ul>
 				</div>
 
