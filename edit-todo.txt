@@ -13,27 +13,6 @@
 
 ################### TODO LOG ###################
 
-###################
-  Backend
-###################
- *  Login Security
- *  Dahsboard
- *
- *
- *
- *
-
-
-###################
-  Frontend
-###################
- *  Index design
- *  Blog Design
- *  Blog Detail design
- *  Project design
- *  Contact design 
- *  Other item
-
 
 ###################
   Security
@@ -97,7 +76,6 @@
 ###################
   edit 23/11/2017
 ###################
-* front end
   - contact and index (home) FIX
   - blog 
     #tampilan semua artilce (jadi)
