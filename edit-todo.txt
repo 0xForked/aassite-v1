@@ -14,19 +14,6 @@
 ################### TODO LOG ###################
 
 
-###################
-  Security
-###################
-
- *  SQL Injection
- *  Hash password
- *  Hak Akses user
- *  Format file
- *  Stuktur folder - private and public
- *  Hak akses lvl error report
- *  xss attack
- *  CSRF attack
-
 
 ################### EDIT LOG ###################
 
